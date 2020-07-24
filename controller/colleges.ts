@@ -1,4 +1,6 @@
-let colleges = [
+import { College } from "../types.ts";
+
+let colleges : College[] = [
   {
     id: "1",
     name: "Bangalore Institute of technology",
