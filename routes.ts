@@ -8,5 +8,5 @@ router.get("/api/v1/colleges" , getColleges)
         .put("/api/v1/colleges/:id", updateCollege)
         .post("/api/v1/colleges/", addCollege)
         .delete("/api/v1/colleges/:id", deleteCollege)
-        
+
 export default router
