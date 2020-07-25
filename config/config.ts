@@ -1,9 +1,9 @@
 const dbCreds = {
   user: "darshan",
   database: "College",
-  password: "9113881745",
+  password: "5579",
   hostname: "localhost",
-  port: 5432,
+  port: 5432
 };
 
 export { dbCreds };
