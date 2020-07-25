@@ -117,7 +117,7 @@ const deleteCollege = ({ response , params }: { params : {id: string} ,response:
     response.status = 200;
     response.body = {
     success: true,
-    msg : "product deleted"
+    msg : "college deleted"
     }
 };
 
