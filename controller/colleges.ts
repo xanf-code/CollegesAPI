@@ -1,4 +1,9 @@
+import { Client } from "https://deno.land/x/postgres/mod.ts";
 import { College } from "../types.ts";
+import { dbCreds } from "../config/config.ts"
+
+//Initialize Client
+const client = new Client(dbCreds);
 
 // Static Data (will be moved to database later on)
 let colleges: College[] = [
@@ -62,20 +67,38 @@ const addCollege = async (
   { request, response }: { request: any; response: any },
 ) => {
   const body = await request.body();
+  const college = body.value;
+
   if (!request.hasBody) {
     response.status = 400;
     response.body = {
       success: false,
       msg: "No Data found",
-    };
+    }
   } else {
-    const college: College = body.value;
-    colleges.push(college);
-    response.status = 201;
+    try {
+    await client.connect();
+    const result = await client .query(
+    "INSERT INTO Colleges(name,type,established) VALUES($1,$2,$3)",
+    college.name,
+    college.type,
+    college.established,
+
+    response.status = 201 ,
     response.body = {
-      success: true,
-      data: college,
-    };
+      success : true,
+      data : college
+    }
+  );
+    }catch (err) {
+      response.status = 500,
+      response.body = {
+        success : false,
+        msg : err.toString()
+      }
+    } finally {
+      await client.end()
+    }
   }
 };
 
