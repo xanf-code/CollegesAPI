@@ -19,7 +19,7 @@ deno start
 ```
 GET      /api/v1/colleges
 GET      /api/v1/college/:id
-POST     /api/v1/colleges
+POST     /api/v1/colleges/
 PUT      /api/v1/colleges/:id
 DELETE   /api/v1/colleges/:id
 ```
