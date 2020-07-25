@@ -30,11 +30,36 @@ let colleges: College[] = [
 // GET all colleges
 // @route GET /api/v1/colleges/
 
-const getColleges = ({ response }: { response: any }) => {
-  response.body = {
-    success: true,
-    data: colleges,
+const getColleges = async ({ response }: { response: any }) => {
+  try {
+    await client.connect()
+
+    const result = await client.query("SELECT * FROM Colleges")
+
+    const colleges = new Array()
+
+    result.rows.map( p => {
+      let obj : any = new Object()
+
+      result.rowDescription.columns.map((el ,i) => {
+        obj[el.name] = p[i]
+      })
+      colleges.push(obj)
+    })
+    response.status = 201,
+    response.body = {
+      success : true,
+      data : colleges
+    }
+  } catch (err) {
+    response.status = 500,
+     response.body = {
+    success: false,
+    msg: err.toString(),
   };
+  }finally{
+    await client.end()
+  }
 };
 
 // GET single college

@@ -1,7 +1,7 @@
 const dbCreds = {
   user: "darshan",
   database: "Colleges",
-  password: "5579",
+  password: "557935",
   hostname: "localhost",
   port: 5432,
 };
