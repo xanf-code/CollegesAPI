@@ -1,4 +1,4 @@
-# RestCollegesAPI (In-Progress)
+# RestCollegesAPI
 
 ### List Of Engineering Colleges in Bangalore,Karnataka API
 
