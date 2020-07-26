@@ -5,7 +5,7 @@
 CheckList:
 
 - [x] Static Colleges API
-- [ ] PostgreSQL DB Backend
+- [x] PostgreSQL DB Backend
 
 ## Run
 
@@ -17,9 +17,9 @@ deno start
 ## Routes
 
 ```
-GET      /api/v1/colleges
+GET      /api/v1/colleges  --database--
 GET      /api/v1/college/:id
-POST     /api/v1/colleges/
+POST     /api/v1/colleges/  --database--
 PUT      /api/v1/colleges/:id
 DELETE   /api/v1/colleges/:id
 ```
