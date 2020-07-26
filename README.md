@@ -5,7 +5,7 @@
 CheckList:
 
 - [x] Static Colleges API
-- [ ] PostgreSQL DB 
+- [ ] PostgreSQL DB Backend
 
 ## Run
 
