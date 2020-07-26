@@ -2,7 +2,7 @@
 
 ### List Of Engineering Colleges in Bangalore,Karnataka API
 
-CheckList:
+## CheckList:
 
 - [x] Static Colleges API
 - [x] PostgreSQL DB Backend
