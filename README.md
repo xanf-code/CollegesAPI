@@ -14,7 +14,7 @@
 deno start
 ```
 
-## Routes
+## ENDPOINTS
 
 ```
 GET      /api/v1/colleges  --database--
