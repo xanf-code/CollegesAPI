@@ -3,7 +3,7 @@ import { College } from "../types.ts";
 import { dbCreds } from "../config/config.ts"
 
 //Initialize Client
-const client = new Client(dbCreds);
+const client = new Client(dbCreds)
 
 // Static Data (will be moved to database later on)
 let colleges: College[] = [
@@ -34,7 +34,7 @@ const getColleges = async ({ response }: { response: any }) => {
   try {
     await client.connect()
 
-    const result = await client.query("SELECT * FROM Colleges")
+    const result = await client.query("SELECT * FROM colleges")
 
     const colleges = new Array()
 
@@ -102,8 +102,8 @@ const addCollege = async (
     }
   } else {
     try {
-    await client.connect();
-    const result = await client .query(
+    await client.connect()
+    const result = await client.query(
     "INSERT INTO Colleges(name,type,established) VALUES($1,$2,$3)",
     college.name,
     college.type,
