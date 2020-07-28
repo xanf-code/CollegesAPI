@@ -16,7 +16,7 @@ deno start
 
 ## Working for ya'll noobsxD
 
-![DemoLOLxD](resources/API/APICall.png "APICall Demo")
+![DemoLOLxD](Resources/API.png "APICall Demo")
 
 ## Routes
 
