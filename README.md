@@ -13,9 +13,10 @@ CheckList:
 # This project uses Denon
 deno start
 ```
-## Example
 
-![alt text](Resources/API.png "Banner")
+## Working for ya'll noobsxD
+
+![DemoLOLxD](resources/API/APICall.png "APICall Demo")
 
 ## Routes
 
