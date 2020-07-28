@@ -15,7 +15,7 @@ deno start
 ```
 ## Example
 
-[API Example](https://github.com/xanf-code/CollegesAPI/blob/master/Resources/API.png)
+![alt text](Resources/API.png "Banner")
 
 ## Routes
 
