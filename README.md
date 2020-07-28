@@ -13,6 +13,9 @@ CheckList:
 # This project uses Denon
 deno start
 ```
+## Example
+
+[API Example](https://github.com/xanf-code/CollegesAPI/blob/master/Resources/API.png)
 
 ## Routes
 
